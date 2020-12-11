@@ -46,6 +46,7 @@ services:
       KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
   schema-registry:
     image: confluentinc/cp-schema-registry:5.4.0
+    container_name: schema-registry
     restart: always
     depends_on:
       - zookeeper
