@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   mysql:
-    image: mysql:8
+    image: debezium/example-mysql:0.9
     container_name: mysql
     volumes:
       - db_data:/var/lib/mysql
@@ -10,7 +10,7 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: contacts
+#      MYSQL_DATABASE: contacts
       MYSQL_USER: dbuser
       MYSQL_PASSWORD: dbpass
   zookeeper:

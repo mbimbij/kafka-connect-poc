@@ -1,0 +1,16 @@
+{
+  "name": "inventory-connector", 
+  "config": {
+    "connector.class": "io.debezium.connector.mysql.MySqlConnector", 
+    "database.hostname": "localhost", 
+    "database.port": "3306", 
+    "database.user": "root", 
+    "database.password": "root", 
+    "database.server.id": "223344", 
+    "database.server.name": "test", 
+    "database.include.list": "contacts", 
+    "database.history.kafka.bootstrap.servers": "localhost:9094", 
+    "database.history.kafka.topic": "contacts.contact", 
+    "include.schema.changes": "true" 
+  }
+}
